@@ -31,7 +31,7 @@ function writeStyleTable(styles) {
     const section1 = `<label>Color Mapping</label><ul>${colorMap}</ul>`;
     const section2 = `<label>Font Mapping</label><ul>${fontMap}</ul>`;
     const template = `
-        <div style="position:fixed; width:400px;height:200px;border:2px solid black;top: 0px; left:0px;background-color:white; overflow:auto;">
+        <div style="position:fixed; width:400px;height:200px;border:2px solid black;top: 0px; left:0px;background-color:white; overflow:auto;z-index:1000000000;">
             ${section1}
             ${section2}
         </div>
