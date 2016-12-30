@@ -12,7 +12,11 @@ function buildTable(nodes) {
     };
 
     elements.forEach(element => {
-        lookupTable['font-family'][window.getComputedStyle(element, null).getPropertyValue('font-family')]  = true;
+        const fontList = window.getComputedStyle(element, null).getPropertyValue('font-family') || '';
+        fontList.split(',').forEach(font=> {
+            lookupTable['font-family'][font.trim()]  = true;
+        })
+        
         lookupTable['background-color'][window.getComputedStyle(element, null).getPropertyValue('background-color')]  = true;        
     });
 
