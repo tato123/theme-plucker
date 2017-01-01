@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react'
+import Draggable from 'react-draggable';
 
 const ThemeSection = ({ label, children }) => (
   <div>
@@ -46,11 +47,22 @@ const FontTheme = ({ data }) => (
 
 
 export default function ThemeProvider ({ theme }) {
+  const rootStyle = {
+    lineHeight: '1.6',
+    fontSize: '13px',
+    fontFamily: 'Sans Serif, Arial',
+    color: 'black',
+    border: '1px solid black',
+    backgroundColor: '#fff',
+    width: '500px'
+  };
   return (
-    <div>
-      <BackgroundTheme data={theme['background-color']} />
-      <FontTheme data={theme['font-family']} />
-    </div>
+    <Draggable>
+      <div style={rootStyle}>
+        <BackgroundTheme data={theme['background-color']} />
+        <FontTheme data={theme['font-family']} />
+      </div>
+    </Draggable>
   )
 }
 

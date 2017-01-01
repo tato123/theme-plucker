@@ -4,9 +4,9 @@
   "description": "Simple tool that reads the current applied styles and attempts to create an output report",
   "main": "src/index.js",
   "scripts": {
-    "start": "webpack-dev-server",    
+    "start": "webpack-dev-server",
     "build": "webpack -p",
-    "build:watch" : "webpack --progress --watch"
+    "build:watch": "webpack --progress --watch"
   },
   "repository": {
     "type": "git",
@@ -32,13 +32,14 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^2.2.3",
     "eslint-plugin-react": "^6.8.0",
-    "file-loader": "^0.9.0",    
+    "file-loader": "^0.9.0",
     "style-loader": "^0.13.1",
     "webpack": "2.2.0-rc.2"
   },
   "dependencies": {
     "react": "^15.4.1",
-    "react-dom": "^15.4.1"
+    "react-dom": "^15.4.1",
+    "react-draggable": "^2.2.3"
   },
   "homepage": "https://github.com/tato123/theme-plucker#readme"
 }
