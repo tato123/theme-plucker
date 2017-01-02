@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react'
+import React, { PropTypes } from 'react';
 import Draggable from 'react-draggable';
 
 const ThemeSection = ({ label, children }) => (
@@ -6,7 +6,7 @@ const ThemeSection = ({ label, children }) => (
     <label>{label}</label>
     {children}
   </div>
-)
+);
 
 const BackgroundTheme = ({ data }) => {
   const defaultStyle = {
@@ -15,7 +15,7 @@ const BackgroundTheme = ({ data }) => {
     marginRight: '15px',
     display: 'inline-block',
     border: '1px solid rgba(0,0,0,0.2)'
-  }
+  };
 
   return (
     <ThemeSection label="Background Colors" >
@@ -23,27 +23,27 @@ const BackgroundTheme = ({ data }) => {
         {Object.keys(data).map((color) => {
           const style = Object.assign({}, defaultStyle, {
             backgroundColor: color
-          })
+          });
           return (
             <li>
               <div style={style} />{color}
             </li>
-          )
+          );
         })}
       </ul>
     </ThemeSection>
-  )
-}
+  );
+};
 
 const FontTheme = ({ data }) => (
   <ThemeSection label="Fonts">
     <ul>
       {Object.keys(data).map(font => (
-      <li>{font}</li>
+        <li>{font}</li>
       ))}
     </ul>
   </ThemeSection>
-)
+);
 
 
 export default function ThemeProvider ({ theme }) {
@@ -63,9 +63,9 @@ export default function ThemeProvider ({ theme }) {
         <FontTheme data={theme['font-family']} />
       </div>
     </Draggable>
-  )
+  );
 }
 
 ThemeProvider.propTypes = {
   theme: PropTypes.object.isRequired
-}
+};
