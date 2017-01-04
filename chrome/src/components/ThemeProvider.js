@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import Draggable from 'react-draggable';
+import {rgb2hex} from '../utils';
 
 const ThemeSection = ({ label, children }) => (
   <div>
@@ -26,7 +27,7 @@ const BackgroundTheme = ({ data }) => {
           });
           return (
             <li>
-              <div style={style} />{color}
+              <div style={style} /> {rgb2hex(color)} {color} 
             </li>
           );
         })}

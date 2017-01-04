@@ -6,10 +6,10 @@ import { execute, hide } from './content_script';
 // create the element
 const div = document.createElement('span');
 div.id = 'app';
-div.style.position = 'absolute';
+div.style.position = 'fixed';
 div.style.zIndex = 10000000;
 div.style.top = '0px';
-div.style.left = '0px';
+div.style.right = '0px';
 document.body.appendChild(div);
 
 // get the current page styles
